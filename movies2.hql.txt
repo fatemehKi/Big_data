@@ -1,0 +1,26 @@
+create database movies;
+use movies; 
+
+create table titles
+    (tconst  string, titleType string,       primaryTitle string,    originalTitle string,   isAdult int, startYear int,endYear string,  runtimeMinutes int,  genres string)
+    row format delimited fields terminated by '\t'
+    tblproperties("skip.header.line.count"="1");
+
+load data local inpath
+    'title.basics.tsv'
+    into table titles;
+
+
+create table crew(tconst  string, directors string,      writers string)
+row format delimited fields terminated by '\t'
+tblproperties("skip.header.line.count"="1");
+
+load data local inpath  'title.crew.tsv'   into table crew;
+
+
+create table ratings(tconst string, averageRating float,  numVotes int)
+row format delimited fields terminated by '\t'
+tblproperties("skip.header.line.count"="1");
+
+load data local inpath  'title.ratings.tsv'   into table ratings;
+
