@@ -1,0 +1,73 @@
+    1  pwd
+    2  ls /home
+    3  clear
+    4  pwd
+    5  ls ..
+    6  clear
+    7  mkdir abc
+    8  ls
+    9  cd abc
+   10  pwd
+   11  mkdir pqr
+   12  ls
+   13  mkdir ../def
+   14  ls
+   15  ls ..
+   16  pwd
+   17  cd pqr
+   18  pwd
+   19  cd ~
+   20  pwd
+   21  ls
+   22  ls def
+   23  rmdir def
+   24  ls
+   25  rmdir abc
+   26  ls
+   27  clear
+   28  ls abc
+   29  pwd
+   30  ls
+   31  mkdir abc/xyz
+   32  ls abc
+   33  ls
+   34  rmdir abc/pqr abc/xyz
+   35  ls abc
+   36  ls
+   37  rmdir abc
+   38  clear
+   39  cat > test.txt
+   40  cat
+   41  cat test.txt
+   42  man cat
+   43  man ls
+   44  clear
+   45  ls
+   46  mkdir abc
+   47  ls
+   48  cp test.txt abc 
+   49  ls abc
+   50  cp test.txt abc/test_copy.txt 
+   51  ls abc
+   52  cat test.txt 
+   53  cat abc/test.txt 
+   54  cat abc/test_copy.txt 
+   55  ls
+   56  rm test.txt 
+   57  rm -r abc
+   58  ls
+   59  mkdir abc
+   60  cat > text
+   61  cat  text
+   62  ls
+   63  mv text abc
+   64  ls
+   65  ls abc
+   66  cd abc
+   67  ls
+   68  mv text text.txt
+   69  ls
+   70  cp text.txt text.txt 
+   71  cp text.txt text_copy.txt 
+   72  history
+   73  history > exercise_1
