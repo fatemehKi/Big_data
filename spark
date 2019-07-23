@@ -1,0 +1,495 @@
+sandbox login: gitimoni                                                                      
+gitimoni@sandbox.hortonworks.com's password:                                                 
+Last login: Tue Jul 23 13:17:56 2019 from 172.17.0.2                                         
+[gitimoni@sandbox ~]$ pyspark                                                                
+Multiple versions of Spark are installed but SPARK_MAJOR_VERSION is not set                  
+Spark1 will be picked by default                                                             
+Python 2.6.6 (r266:84292, Aug 18 2016, 15:13:37)                                             
+[GCC 4.4.7 20120313 (Red Hat 4.4.7-17)] on linux2                                            
+Type "help", "copyright", "credits" or "license" for more information.                       
+19/07/23 14:33:05 INFO SparkContext: Running Spark version 1.6.3                             
+19/07/23 14:33:05 INFO SecurityManager: Changing view acls to: gitimoni                      
+19/07/23 14:33:05 INFO SecurityManager: Changing modify acls to: gitimoni                    
+19/07/23 14:33:05 INFO SecurityManager: SecurityManager: authentication disabled; ui acls dis
+i); users with modify permissions: Set(gitimoni)                                             
+19/07/23 14:33:06 INFO Utils: Successfully started service 'sparkDriver' on port 40709.      
+19/07/23 14:33:06 INFO Slf4jLogger: Slf4jLogger started                                      
+19/07/23 14:33:06 INFO Remoting: Starting remoting                                           
+19/07/23 14:33:06 INFO Remoting: Remoting started; listening on addresses :[akka.tcp://sparkD
+19/07/23 14:33:06 INFO Utils: Successfully started service 'sparkDriverActorSystem' on port 4
+19/07/23 14:33:06 INFO SparkEnv: Registering MapOutputTracker                                
+19/07/23 14:33:06 INFO SparkEnv: Registering BlockManagerMaster                              
+19/07/23 14:33:06 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-82512052-7b
+19/07/23 14:33:06 INFO MemoryStore: MemoryStore started with capacity 511.1 MB               
+19/07/23 14:33:07 INFO SparkEnv: Registering OutputCommitCoordinator                         
+19/07/23 14:33:07 INFO Server: jetty-8.y.z-SNAPSHOT                                          
+19/07/23 14:33:07 WARN AbstractLifeCycle: FAILED SelectChannelConnector@0.0.0.0:4040: java.ne
+java.net.BindException: Address already in use                                               
+        at sun.nio.ch.Net.bind0(Native Method)                                               
+        at sun.nio.ch.Net.bind(Net.java:433)                                                 
+        at sun.nio.ch.Net.bind(Net.java:425)                                                 
+        at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)         
+        at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)                  
+        at org.spark-project.jetty.server.nio.SelectChannelConnector.open(SelectChannelConnec
+        at org.spark-project.jetty.server.AbstractConnector.doStart(AbstractConnector.java:31
+        at org.spark-project.jetty.server.nio.SelectChannelConnector.doStart(SelectChannelCon
+        at org.spark-project.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.j
+        at org.spark-project.jetty.server.Server.doStart(Server.java:293)                    
+        at org.spark-project.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.j
+        at org.apache.spark.ui.JettyUtils$.org$apache$spark$ui$JettyUtils$$connect$1(JettyUti
+        at org.apache.spark.ui.JettyUtils$$anonfun$5.apply(JettyUtils.scala:262)             
+        at org.apache.spark.ui.JettyUtils$$anonfun$5.apply(JettyUtils.scala:262)             
+        at org.apache.spark.util.Utils$$anonfun$startServiceOnPort$1.apply$mcVI$sp(Utils.scal
+        at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:141)                  
+        at org.apache.spark.util.Utils$.startServiceOnPort(Utils.scala:2031)                 
+        at org.apache.spark.ui.JettyUtils$.startJettyServer(JettyUtils.scala:262)            
+        at org.apache.spark.ui.WebUI.bind(WebUI.scala:137)                                   
+        at org.apache.spark.SparkContext$$anonfun$13.apply(SparkContext.scala:481)           
+        at org.apache.spark.SparkContext$$anonfun$13.apply(SparkContext.scala:481)           
+        at scala.Option.foreach(Option.scala:236)                                            
+        at org.apache.spark.SparkContext.<init>(SparkContext.scala:481)                      
+        at org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:59)      
+        at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)             
+        at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImp
+        at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAcc
+        at java.lang.reflect.Constructor.newInstance(Constructor.java:423)                   
+        at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:234)                      
+        at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:381)                
+        at py4j.Gateway.invoke(Gateway.java:214)                                             
+        at py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:79)    
+        at py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:68)              
+        at py4j.GatewayConnection.run(GatewayConnection.java:209)                            
+        at java.lang.Thread.run(Thread.java:748)                                             
+19/07/23 14:33:07 WARN AbstractLifeCycle: FAILED org.spark-project.jetty.server.Server@1b5fb7
+use                                                                                          
+java.net.BindException: Address already in use                                               
+        at sun.nio.ch.Net.bind0(Native Method)                                               
+        at sun.nio.ch.Net.bind(Net.java:433)                                                 
+        at sun.nio.ch.Net.bind(Net.java:425)                                                 
+        at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)         
+        at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)                  
+        at org.spark-project.jetty.server.nio.SelectChannelConnector.open(SelectChannelConnec
+        at org.spark-project.jetty.server.AbstractConnector.doStart(AbstractConnector.java:31
+        at org.spark-project.jetty.server.nio.SelectChannelConnector.doStart(SelectChannelCon
+        at org.spark-project.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.j
+        at org.spark-project.jetty.server.Server.doStart(Server.java:293)                    
+        at org.spark-project.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.j
+        at org.apache.spark.ui.JettyUtils$.org$apache$spark$ui$JettyUtils$$connect$1(JettyUti
+        at org.apache.spark.ui.JettyUtils$$anonfun$5.apply(JettyUtils.scala:262)             
+        at org.apache.spark.ui.JettyUtils$$anonfun$5.apply(JettyUtils.scala:262)             
+        at org.apache.spark.util.Utils$$anonfun$startServiceOnPort$1.apply$mcVI$sp(Utils.scal
+        at scala.collection.immutable.Range.foreach$mVc$sp(Range.scala:141)                  
+        at org.apache.spark.util.Utils$.startServiceOnPort(Utils.scala:2031)                 
+        at org.apache.spark.ui.JettyUtils$.startJettyServer(JettyUtils.scala:262)            
+        at org.apache.spark.ui.WebUI.bind(WebUI.scala:137)                                   
+        at org.apache.spark.SparkContext$$anonfun$13.apply(SparkContext.scala:481)           
+        at org.apache.spark.SparkContext$$anonfun$13.apply(SparkContext.scala:481)           
+        at scala.Option.foreach(Option.scala:236)                                            
+        at org.apache.spark.SparkContext.<init>(SparkContext.scala:481)                      
+        at org.apache.spark.api.java.JavaSparkContext.<init>(JavaSparkContext.scala:59)      
+        at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)             
+        at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImp
+        at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAcc
+        at java.lang.reflect.Constructor.newInstance(Constructor.java:423)                   
+        at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:234)                      
+        at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:381)                
+        at py4j.Gateway.invoke(Gateway.java:214)                                             
+        at py4j.commands.ConstructorCommand.invokeConstructor(ConstructorCommand.java:79)    
+        at py4j.commands.ConstructorCommand.execute(ConstructorCommand.java:68)              
+        at py4j.GatewayConnection.run(GatewayConnection.java:209)                            
+        at java.lang.Thread.run(Thread.java:748)                                             
+19/07/23 14:33:07 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages/stage/ki
+19/07/23 14:33:07 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/api,null}      
+19/07/23 14:33:07 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/,null}         
+19/07/23 14:33:07 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/static,null}   
+19/07/23 14:33:07 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/executors/threa
+19/07/23 14:33:07 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/executors/threa
+19/07/23 14:33:07 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/executors/json,
+19/07/23 14:33:07 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/executors,null}
+19/07/23 14:33:07 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/environment/jso
+19/07/23 14:33:07 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/environment,nul
+19/07/23 14:33:07 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/storage/rdd/jso
+19/07/23 14:33:07 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/storage/rdd,nul
+19/07/23 14:33:07 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/storage/json,nu
+19/07/23 14:33:07 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/storage,null}  
+19/07/23 14:33:07 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages/pool/jso
+>>> 
+19/07/23 14:43:29 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/metrics/json,nu
+19/07/23 14:43:29 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/stages/stage/ki
+19/07/23 14:43:29 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/api,null}
+19/07/23 14:43:29 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/,null}
+19/07/23 14:43:29 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/static,null}
+19/07/23 14:43:29 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/executors/threa
+19/07/23 14:43:29 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/executors/threa
+19/07/23 14:43:29 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/executors/json,
+19/07/23 14:43:29 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/executors,null}
+19/07/23 14:43:29 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/environment/jso
+19/07/23 14:43:29 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/environment,nul
+19/07/23 14:43:29 INFO ContextHandler: stopped o.s.j.s.ServletContextHandler{/storage/rdd/jso
+[gitimoni@sandbox ~]$ls                                                                      
+big_data  Clustering  employees  movies  name.basics.tsv  Social_Network_Ads.csv  test.txt  t
+[gitimoni@sandbox ~]$ pyspark
+
+
+
+
+[gitimoni@sandbox ~]$ pyspark
+
+
+
+>>> def sum(func,range(1:10)):                                                               
+  File "<stdin>", line 1
+    def sum(func,range(1:10)):
+                      ^
+SyntaxError: invalid syntax
+>>> def sum(func,list):                                                                      
+... for i in list:
+  File "<stdin>", line 2
+    for i in list:
+>>> def sum(func,list):                                                                      
+...   total = 0
+...     for i in list:
+  File "<stdin>", line 3
+    for i in list:
+    ^
+IndentationError: unexpected indent
+>>> def sum(func,list):                                                                      
+...   total = 0
+...   for i in list:
+...     i = func(i)                                                                          
+...     total+=i                                                                             
+  File "<stdin>", line 5
+    total+=i
+           ^
+IndentationError: unindent does not match any outer indentation level
+>>> def sum(func,list):                                                                      
+...     total = 0                                                                            
+...     for i in list:                                                                       
+...         i = func(i)                                                                      
+...         total+= i
+...     return total                                                                         
+...                                                                                          
+>>> sum(lambda x: x,range(1,10))                                                             
+45                                                                                           
+>>> sum(lambda x: x*x ,range(1,10))                                                          
+285                                                                                          
+>>> sum(lambda x: x*x ,range(1,11))                                                          
+385                                                                                          
+>>> sum(lambda x: x**3 ,range(1,11))                                                         
+3025                                                                                         
+>>>                                                                                          
+>>>                                                                                          
+>>> map(lambda x:x**2, list(range(1,11))                                                     
+... )                                                                                        
+[1, 4, 9, 16, 25, 36, 49, 64, 81, 100]                                                       
+>>> reduce(lambda x,y: x+y, range(1,11))                                                     
+55                                                                                           
+>>> m = map(lambda x:x**2, range(1,11))                                                      
+>>> reduce(lambda x,y: x+y, m)                                                               
+385                                                                                          
+>>> f = filter(lambda x: x%2 == 0, m)                                                        
+>>> f                                                                                        
+[4, 16, 36, 64, 100]                                                                         
+>>> l = range(1:5001)                                                                        
+  File "<stdin>", line 1                                                                     
+    l = range(1:5001)                                                                        
+               ^                                                                             
+SyntaxError: invalid syntax                                                                  
+>>> l = range(1,5001)                                                                        
+>>> rdd_1 = parallelize(l)                                                                   
+Traceback (most recent call last):                                                           
+  File "<stdin>", line 1, in <module>                                                        
+NameError: name 'parallelize' is not defined                                                 
+>>> rdd_1 = sc.parallelize(l)                                                                
+>>> help(sc)                                                                                 
+
+>>> help(sc)                                                                                 
+
+>>> rdd_2 = sc.textFile('Social_Network_Ads.csv')                                            
+>>> rdd_2                                                                                    
+Social_Network_Ads.csv MapPartitionsRDD[2] at textFile at NativeMethodAccessorImpl.java:-2   
+>>> rdd_2.take(1)                                                                            
+Traceback (most recent call last):                                                           
+  File "<stdin>", line 1, in <module>                                                        
+  File "/usr/hdp/current/spark-client/python/pyspark/rdd.py", line 1267, in take             
+    totalParts = self.getNumPartitions()                                                     
+  File "/usr/hdp/current/spark-client/python/pyspark/rdd.py", line 356, in getNumPartitions  
+    return self._jrdd.partitions().size()                                                    
+  File "/usr/hdp/current/spark-client/python/lib/py4j-0.9-src.zip/py4j/java_gateway.py", line
+ 813, in __call__                                                                            
+  File "/usr/hdp/current/spark-client/python/pyspark/sql/utils.py", line 45, in deco         
+    return f(*a, **kw)                                                                       
+  File "/usr/hdp/current/spark-client/python/lib/py4j-0.9-src.zip/py4j/protocol.py", line 308
+, in get_return_value                                                                        
+py4j.protocol.Py4JJavaError: An error occurred while calling o41.partitions.                 
+: org.apache.hadoop.mapred.InvalidInputException: Input path does not exist: hdfs://sandbox.h
+ortonworks.com:8020/user/gitimoni/Social_Network_Ads.csv                                     
+        at org.apache.hadoop.mapred.FileInputFormat.singleThreadedListStatus(FileInputFormat.
+java:287)                                                                                    
+        at org.apache.hadoop.mapred.FileInputFormat.listStatus(FileInputFormat.java:229)     
+        at org.apache.hadoop.mapred.FileInputFormat.getSplits(FileInputFormat.java:315)      
+        at org.apache.spark.rdd.HadoopRDD.getPartitions(HadoopRDD.scala:202)                 
+        at org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:242)               
+        at org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:240)               
+        at scala.Option.getOrElse(Option.scala:120)                                          
+        at org.apache.spark.rdd.RDD.partitions(RDD.scala:240)                                
+        at org.apache.spark.rdd.MapPartitionsRDD.getPartitions(MapPartitionsRDD.scala:35)    
+        at org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:242)               
+        at org.apache.spark.rdd.RDD$$anonfun$partitions$2.apply(RDD.scala:240)               
+        at scala.Option.getOrElse(Option.scala:120)                                          
+        at org.apache.spark.rdd.RDD.partitions(RDD.scala:240)                                
+        at org.apache.spark.api.java.JavaRDDLike$class.partitions(JavaRDDLike.scala:64)      
+        at org.apache.spark.api.java.AbstractJavaRDDLike.partitions(JavaRDDLike.scala:46)    
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)                       
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)     
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:
+43)                                                                                          
+        at java.lang.reflect.Method.invoke(Method.java:498)                                  
+        at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:231)                      
+        at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:381)                
+        at py4j.Gateway.invoke(Gateway.java:259)                                             
+        at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:133)              
+        at py4j.commands.CallCommand.execute(CallCommand.java:79)                            
+        at py4j.GatewayConnection.run(GatewayConnection.java:209)                            
+        at java.lang.Thread.run(Thread.java:748)                                             
+                                                                                             
+>>> rdd_2 = sc.textFile('hdfs:///user/gitimoni/Social_Network_Ads.csv')                      
+>>> l = range(1,5001)                                                                        
+>>> rdd_1 = sc.parallelize(l)                                                                
+>>> rdd_2 = sc.textFile('hdfs:///user/gitimoni/Social_Network_Ads.csv')                      
+>>> rdd_2.take(10)                                                                           
+[u'User ID,Gender,Age,EstimatedSalary,Purchased', u'15624510,Male,19,19000,0', u'15810944,Mal
+e,35,20000,0', u'15668575,Female,26,43000,0', u'15603246,Female,27,57000,0', u'15804002,Male,
+19,76000,0', u'15728773,Male,27,58000,0', u'15598044,Female,27,84000,0', u'15694829,Female,32
+,150000,1', u'15600575,Male,25,33000,0']
+>>> rdd_text = sc.textFile('wordcount.txt')                                                  
+>>> rdd_text.take(1)                                                                         
+[u'This is simple text file to show']
+>>> rdd_text.take(*)                                                                         
+  File "<stdin>", line 1
+    rdd_text.take(*)
+                   ^
+SyntaxError: invalid syntax
+>>> rdd_text.take()                                                                          
+Traceback (most recent call last):
+>>> rdd_text.collect()                                                                       
+[u'This is simple text file to show', u'word count implementation', u'in pyspark', u'pyspark 
+is a great system', u'simple text show show', u'word more word']
+>>> rdd_words = rdd_text.flatMap(lambda x: x.split())                                        
+  File "<stdin>", line 1
+    rdd_words = rdd_text.flatMap(lambdaa x: x.split())
+                                         ^
+SyntaxError: invalid syntax
+>>> rdd_words = rdd_text.flatMap(lambda x: x.split())                                        
+>>> rdd_words.collect()                                                                      
+[u'This', u'is', u'simple', u'text', u'file', u'to', u'show', u'word', u'count', u'implementa
+tion', u'in', u'pyspark', u'pyspark', u'is', u'a', u'great', u'system', u'simple', u'text', u
+'show', u'show', u'word', u'more', u'word']
+>>> rdd_words_list = rdd_text.map(lambda x: x.split())                                       
+>>> rdd_words_list.collect()                                                                 
+[[u'This', u'is', u'simple', u'text', u'file', u'to', u'show'], [u'word', u'count', u'impleme
+ntation'], [u'in', u'pyspark'], [u'pyspark', u'is', u'a', u'great', u'system'], [u'simple', u
+>>> wc_dict = rdd_words.countByValue()                                                       
+>>> for word, count in wc_dict:                                                              
+...   print(word, count)                                                                     
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+ValueError: too many values to unpack
+>>>                                                                                          
+Traceback (most recent call last):
+  File "/usr/hdp/current/spark-client/python/pyspark/context.py", line 235, in signal_handler
+    raise KeyboardInterrupt()
+KeyboardInterrupt
+>>> for word, count in wc_dict.item():                                                       
+...   print(word, count)                                                                     
+... 
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+>>> rdd_lines = sc.textFile('wordcount.txt')                                                 
+>>> rdd_words = rdd_lines.flatMap(lambda x: x.split())                                       
+>>> wc_dict = rdd_words.countByValue()                                                       
+>>> for word, count in wc_dict.items():                                                      
+...   print(word, count)                                                                     
+... 
+(u'count', 1)
+(u'a', 1)
+(u'great', 1)
+(u'word', 3)
+(u'show', 3)
+(u'This', 1)
+(u'text', 2)
+(u'is', 2)
+(u'pyspark', 2)
+(u'system', 1)
+(u'to', 1)
+(u'file', 1)
+(u'in', 1)
+(u'implementation', 1)
+(u'simple', 2)
+(u'more', 1)                                                                                 
+>>> for word, count in sorted(wc_dict.items()):                                              
+...   print(word, count)                                                                     
+>>> rdd_records = rdd_2.map(lambda x: x.split(,))
+  File "<stdin>", line 1
+    rdd_records = rdd_2.map(lambda x: x.split(,))
+                                              ^
+SyntaxError: invalid syntax
+>>> rdd_records = rdd_2.map(lambda x: x.split(','))
+>>> rdd_records.take(2)                                                                      
+[[u'User ID', u'Gender', u'Age', u'EstimatedSalary', u'Purchased'], [u'15624510', u'Male', u'
+19', u'19000', u'0']]
+>>> rdd_user_purchased = rdd_records.map(lambda x: list(x[0],x[4]))                          
+>>> rdd_user_purchased.take(1)                                                               
+19/07/23 17:29:01 ERROR Executor: Exception in task 0.0 in stage 22.0 (TID 31)
+org.apache.spark.api.python.PythonException: Traceback (most recent call last):
+  File "/usr/hdp/current/spark-client/python/lib/pyspark.zip/pyspark/worker.py", line 111, in
+ main
+    process()
+  File "/usr/hdp/current/spark-client/python/lib/pyspark.zip/pyspark/worker.py", line 106, in
+ process
+    serializer.dump_stream(func(split_index, iterator), outfile)
+  File "/usr/hdp/current/spark-client/python/lib/pyspark.zip/pyspark/serializers.py", line 26
+3, in dump_stream
+    vs = list(itertools.islice(iterator, batch))                                             
+  File "/usr/hdp/current/spark-client/python/pyspark/rdd.py", line 1293, in takeUpToNumLeft  
+    yield next(iterator)                                                                     
+  File "<stdin>", line 1, in <lambda>                                                        
+TypeError: list() takes at most 1 argument (2 given)                                         
+                                                                                             
+        at org.apache.spark.api.python.PythonRunner$$anon$1.read(PythonRDD.scala:166)        
+        at org.apache.spark.api.python.PythonRunner$$anon$1.<init>(PythonRDD.scala:207)      
+        at org.apache.spark.api.python.PythonRunner.compute(PythonRDD.scala:125)             
+        at org.apache.spark.api.python.PythonRDD.compute(PythonRDD.scala:70)                 
+        at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:313)                   
+        at org.apache.spark.rdd.RDD.iterator(RDD.scala:277)                                  
+        at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:66)                
+        at org.apache.spark.scheduler.Task.run(Task.scala:89)                                
+        at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:227)             
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)   
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)   
+        at java.lang.Thread.run(Thread.java:748)                                             
+19/07/23 17:29:01 ERROR TaskSetManager: Task 0 in stage 22.0 failed 1 times; aborting job    
+Traceback (most recent call last):                                                           
+  File "<stdin>", line 1, in <module>                                                        
+  File "/usr/hdp/current/spark-client/python/pyspark/rdd.py", line 1297, in take             
+    res = self.context.runJob(self, takeUpToNumLeft, p)                                      
+  File "/usr/hdp/current/spark-client/python/pyspark/context.py", line 949, in runJob        
+    port = self._jvm.PythonRDD.runJob(self._jsc.sc(), mappedRDD._jrdd, partitions)           
+  File "/usr/hdp/current/spark-client/python/lib/py4j-0.9-src.zip/py4j/java_gateway.py", line
+ 813, in __call__                                                                            
+  File "/usr/hdp/current/spark-client/python/pyspark/sql/utils.py", line 45, in deco         
+    return f(*a, **kw)                                                                       
+  File "/usr/hdp/current/spark-client/python/lib/py4j-0.9-src.zip/py4j/protocol.py", line 308
+, in get_return_value                                                                        
+py4j.protocol.Py4JJavaError: An error occurred while calling z:org.apache.spark.api.python.Py
+thonRDD.runJob.                                                                              
+: org.apache.spark.SparkException: Job aborted due to stage failure: Task 0 in stage 22.0 fai
+led 1 times, most recent failure: Lost task 0.0 in stage 22.0 (TID 31, localhost): org.apache
+.spark.api.python.PythonException: Traceback (most recent call last):                        
+  File "/usr/hdp/current/spark-client/python/lib/pyspark.zip/pyspark/worker.py", line 111, in
+ main                                                                                        
+    process()                                                                                
+  File "/usr/hdp/current/spark-client/python/lib/pyspark.zip/pyspark/worker.py", line 106, in
+ process                                                                                     
+    serializer.dump_stream(func(split_index, iterator), outfile)                             
+  File "/usr/hdp/current/spark-client/python/lib/pyspark.zip/pyspark/serializers.py", line 26
+3, in dump_stream                                                                            
+    vs = list(itertools.islice(iterator, batch))                                             
+  File "/usr/hdp/current/spark-client/python/pyspark/rdd.py", line 1293, in takeUpToNumLeft  
+    yield next(iterator)                                                                     
+  File "<stdin>", line 1, in <lambda>                                                        
+TypeError: list() takes at most 1 argument (2 given)                                         
+                                                                                             
+        at org.apache.spark.api.python.PythonRunner$$anon$1.read(PythonRDD.scala:166)        
+        at org.apache.spark.api.python.PythonRunner$$anon$1.<init>(PythonRDD.scala:207)      
+        at org.apache.spark.api.python.PythonRunner.compute(PythonRDD.scala:125)             
+        at org.apache.spark.api.python.PythonRDD.compute(PythonRDD.scala:70)                 
+        at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:313)                   
+        at org.apache.spark.rdd.RDD.iterator(RDD.scala:277)                                  
+        at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:66)                
+        at org.apache.spark.scheduler.Task.run(Task.scala:89)                                
+        at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:227)             
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)   
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)   
+        at java.lang.Thread.run(Thread.java:748)                                             
+                                                                                             
+Driver stacktrace:                                                                           
+        at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$f
+ailJobAndIndependentStages(DAGScheduler.scala:1433)                                          
+        at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.s
+cala:1421)                                                                                   
+        at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.s
+cala:1420)                                                                                   
+        at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)    
+        at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:47)                
+        at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1420)       
+        at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGSc
+heduler.scala:801)                                                                           
+        at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGSc
+heduler.scala:801)                                                                           
+        at scala.Option.foreach(Option.scala:236)                                            
+        at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:801
+)                                                                                            
+        at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.s
+cala:1642)                                                                                   
+        at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.sca
+la:1601)                                                                                     
+        at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.sca
+la:1590)                                                                                     
+        at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)                   
+        at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:622)            
+        at org.apache.spark.SparkContext.runJob(SparkContext.scala:1831)                     
+        at org.apache.spark.SparkContext.runJob(SparkContext.scala:1844)                     
+        at org.apache.spark.SparkContext.runJob(SparkContext.scala:1857)                     
+        at org.apache.spark.api.python.PythonRDD$.runJob(PythonRDD.scala:393)                
+        at org.apache.spark.api.python.PythonRDD.runJob(PythonRDD.scala)                     
+        at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)                       
+        at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)     
+        at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:
+43)                                                                                          
+        at java.lang.reflect.Method.invoke(Method.java:498)                                  
+        at py4j.reflection.MethodInvoker.invoke(MethodInvoker.java:231)                      
+        at py4j.reflection.ReflectionEngine.invoke(ReflectionEngine.java:381)                
+        at py4j.Gateway.invoke(Gateway.java:259)                                             
+        at py4j.commands.AbstractCommand.invokeMethod(AbstractCommand.java:133)              
+        at py4j.commands.CallCommand.execute(CallCommand.java:79)                            
+        at py4j.GatewayConnection.run(GatewayConnection.java:209)                            
+        at java.lang.Thread.run(Thread.java:748)                                             
+Caused by: org.apache.spark.api.python.PythonException: Traceback (most recent call last):   
+  File "/usr/hdp/current/spark-client/python/lib/pyspark.zip/pyspark/worker.py", line 111, in
+ main                                                                                        
+    process()                                                                                
+  File "/usr/hdp/current/spark-client/python/lib/pyspark.zip/pyspark/worker.py", line 106, in
+ process                                                                                     
+    serializer.dump_stream(func(split_index, iterator), outfile)                             
+  File "/usr/hdp/current/spark-client/python/lib/pyspark.zip/pyspark/serializers.py", line 26
+3, in dump_stream                                                                            
+    vs = list(itertools.islice(iterator, batch))                                             
+  File "/usr/hdp/current/spark-client/python/pyspark/rdd.py", line 1293, in takeUpToNumLeft  
+    yield next(iterator)                                                                     
+  File "<stdin>", line 1, in <lambda>                                                        
+TypeError: list() takes at most 1 argument (2 given)                                         
+                                                                                             
+        at org.apache.spark.api.python.PythonRunner$$anon$1.read(PythonRDD.scala:166)        
+        at org.apache.spark.api.python.PythonRunner$$anon$1.<init>(PythonRDD.scala:207)      
+        at org.apache.spark.api.python.PythonRunner.compute(PythonRDD.scala:125)             
+        at org.apache.spark.api.python.PythonRDD.compute(PythonRDD.scala:70)                 
+        at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:313)                   
+        at org.apache.spark.rdd.RDD.iterator(RDD.scala:277)                                  
+        at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:66)                
+        at org.apache.spark.scheduler.Task.run(Task.scala:89)                                
+        at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:227)             
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)   
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)   
+        ... 1 more                                                                           
+                                                                                             
+>>> rdd_records.take(2)                                                                      
+[[u'User ID', u'Gender', u'Age', u'EstimatedSalary', u'Purchased'], [u'15624510', u'Male', u'
+19', u'19000', u'0']]                                                                        
+>>> rdd_user_purchased = rdd_records.map(lambda x: [x[0],x[4]])                              
+>>> rdd_user_purchased.take(1)                                                               
+[[u'User ID', u'Purchased']]                                                                 
+>>> rdd_user_purchased.take(3)                                                               
+[[u'User ID', u'Purchased'], [u'15624510', u'0'], [u'15810944', u'0']]                       
+>>>
