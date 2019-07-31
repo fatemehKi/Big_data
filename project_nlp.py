@@ -17,18 +17,16 @@ import re
 import string
 from pyspark.sql import Row
 
-
-
 SpSession = SparkSession.builder.master("local").appName("py_spark").getOrCreate()
 SpContext = SpSession.sparkContext
+
+
 datalines = SpContext.textFile("sparkml/Comment_Classification_WOH.csv")
-parts=datalines.map(lambda l:l.split(','))
-cmnt2=parts.map(lambda p:Row(Comment=p[0]))
-cmnt3=parts.map(lambda p:Row(out1=int(p[2]), out2=int(p[3]), out3=int(p[4]), out4=int(p[6]), out5=int(p[7]), out6=int(p[8])))
 
 parts=datalines.map(lambda l:l.split(','))
 cmnt2=parts.map(lambda p:Row(Comment=p[0]))
 cmnt3=parts.map(lambda p:Row(out1=int(p[2]), out2=int(p[3]), out3=int(p[4]), out4=int(p[6]), out5=int(p[7]), out6=int(p[8])))
+
 
 dataset2=SpSession.createDataFrame(cmnt2)
 
@@ -45,7 +43,7 @@ def word_TokenizeFunct(x):
 wordTokenizeRDD = sentenceTokenizeRDD.map(word_TokenizeFunct)
 
 def removeStopWordsFunct(x):
-    from nltk.corpus import stopwords
+    #from nltk.corpus import stopwords
     stop_words=set(stopwords.words('english'))
     filteredSentence = [w for w in x if not w in stop_words]
     return filteredSentence
@@ -66,8 +64,27 @@ def lemmatizationFunct(x):
 lem_wordsRDD = rmvPunctRDD.map(lemmatizationFunct)
 
 def joinTokensFunct(x):
-    joinedTokens_list = []
+    #joinedTokens_list = []
     x = " ".join(x)
     return x
 joinedTokens = lem_wordsRDD.map(joinTokensFunct)
 
+###1.not tested
+#people = joinedTokens.map(lambda x: Row(name=x[0]))
+##df_p = sqlContext.createDataFrame(people)
+#
+###2. didnèt work
+##rdd = sc.parallelize([(1,2,3),(4,5,6),(7,8,9)])
+#df = joinedTokens.toDF()
+#
+###3.unicode error
+#dataset2=SpSession.createDataFrame(joinedTokens)
+#
+###4. error
+##from pyspark.sql.types import *
+#from pyspark.sql.types import StringType
+##sc = spark.sparkContext
+#df = SpSession.createDataFrame(joinedTokens, StringType())
+
+##5.
+df2 = joinedTokens.map(lambda x: (x, )).toDF()
